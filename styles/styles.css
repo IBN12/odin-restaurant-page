@@ -1,0 +1,119 @@
+/* body - The main body of the page. */
+body{
+    margin: 0;
+    padding: 0;
+    /* background: url('../images/Concept-Art-11.png');
+    background-position: center bottom 100%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-color: #fefce8; */
+}
+
+/* * - All elements within the application. */
+*{
+    box-sizing: border-box;
+}
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
+/* |Content Section| */
+#content{
+    padding: 20px;
+    height: 100vh;
+}
+
+/* Content Section | Home Page Background */
+.home-page-background{
+    background: url('../images/Concept-Art-11.png');
+    background-position: center bottom 100%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-color: #fefce8; 
+}
+
+/* |Content Section | Menu Page Background| */
+.menu-page-background{
+    background-color: lightcoral;
+}
+
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
+/* |Navigation Content Section| */
+.navigation-content{
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-template-rows: auto;
+    gap:10px;
+    justify-content:center;
+
+    border: 1px solid #fefce883;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 800px;
+    background-color: #fefce883;
+}
+.navigation-content > div{
+    border: 2px solid darkblue;
+}
+
+/* Title Section */
+.navigation-content > div:nth-child(6){
+    grid-column: 1 / 6;
+
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
+/* |Main Content Section| */
+#main-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 200px;
+
+    /* border: 3px solid white; */
+    border-radius: 10px;
+    color: black;
+
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 1100px;
+    /* color:#fdba74; */
+}
+#main-content > div{
+    border: 1px solid #fefce883;
+    border-radius: 10px;
+    background-color: #fefce883;
+}
+
+/* Main Content|Main Content One */
+.main-content-one{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    padding: 5px;
+}
+.main-content-one > div{
+    border: 2px solid purple;
+}
+
+/* Main Content|Main Content Two */
+.main-content-two{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+
+    padding: 5px;
+}
+.main-content-two > div{
+    border: 2px solid darkgreen;
+}
