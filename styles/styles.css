@@ -2,37 +2,58 @@
 body{
     margin: 0;
     padding: 0;
-    /* background: url('../images/Concept-Art-11.png');
+    height: 100vh;
+    background: url('../images/Concept-Art-11.png');
     background-position: center bottom 100%;
     background-repeat: no-repeat;
     background-size: 60%;
-    background-color: #fefce8; */
+    background-color: #fefce8;
 }
 
 /* * - All elements within the application. */
 *{
     box-sizing: border-box;
 }
+
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
+/* |Font Section| */
+/*@font-face - cartis beautyful font */
+@font-face {
+    font-family: cartis-beautyful;
+    src: url(../fonts/cartis_beautyful/Cartis\ Beautyful\ serif.otf);
+}
+
+
+
 /***************************************************************************************************************************************************/
 /***************************************************************************************************************************************************/
 /* |Content Section| */
 #content{
     padding: 20px;
-    height: 100vh;
-}
-
-/* Content Section | Home Page Background */
-.home-page-background{
-    background: url('../images/Concept-Art-11.png');
-    background-position: center bottom 100%;
-    background-repeat: no-repeat;
-    background-size: 60%;
-    background-color: #fefce8; 
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* |Content Section | Menu Page Background| */
 .menu-page-background{
+    background-color: lightblue;
+}
+
+/* |Content Section | Drinks Page Background| */
+.drinks-page-background{
     background-color: lightcoral;
+}
+
+/* |Content Section | About Us Page Background| */
+.about-us-page-background{
+    background-color: lightcyan;
+}
+
+/* |Content Section | Contact Us Page Background| */
+.contact-us-page-background{
+    background-color: lightseagreen;
 }
 
 /***************************************************************************************************************************************************/
@@ -43,77 +64,206 @@ body{
     grid-template-columns: repeat(5, 120px);
     grid-template-rows: auto;
     gap:10px;
-    justify-content:center;
+    justify-content: center;
 
-    border: 1px solid #fefce883;
+    border: 1px solid #fefce8a2;
     border-radius: 10px;
     color: black;
     padding: 10px;
     margin: 0 auto;
     margin-top: 40px;
     width: 800px;
-    background-color: #fefce883;
+    background-color: #fefce8a2;
 }
 .navigation-content > div{
-    border: 2px solid darkblue;
+    /* border: 2px solid darkblue; */
+}
+
+/* Module Tabs */
+.navigation-content button{
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #fefce8;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: cartis-beautyful ,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #fefce8;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.navigation-content button:hover{
+    background-color: #fefce886;
+}
+
+/* Current Module Tab */
+.current-module-tab{
+    text-shadow: 4px 4px 1px #f59e0b;
 }
 
 /* Title Section */
 .navigation-content > div:nth-child(6){
     grid-column: 1 / 6;
 
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     letter-spacing: 5px;
+    font-family: cartis-beautyful ,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-
 /***************************************************************************************************************************************************/
 /***************************************************************************************************************************************************/
-/* |Main Content Section| */
-#main-content{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 200px;
+/* |Main Module Content| */
+.main-module-content{
+    flex-grow: 1;
 
-    /* border: 3px solid white; */
-    border-radius: 10px;
-    color: black;
-
-    padding: 10px;
     margin: 0 auto;
-    margin-top: 50px;
-    width: 1100px;
-    /* color:#fdba74; */
+    margin-top: 40px;
+    width: 1000px;
+    border: 3px solid darkblue;
+    padding: 10px;
 }
-#main-content > div{
+
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
+/* |Main Module Footer| */
+.main-module-footer{
+    margin: 0 auto;
+    width: 800px;
+    border: 1px solid #fefce8a2;
+    border-radius: 10px;
+    background-color: #fefce8a2;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 3px;
+    letter-spacing: 5px;
+    font-family: cartis-beautyful ,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: bold;
+}
+
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
+/* |Homepage Content Section| */
+#homepage-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    margin: 0 auto;
     border: 1px solid #fefce883;
     border-radius: 10px;
-    background-color: #fefce883;
+    color: black;
+    padding: 10px;
+    width: 800px;
+    background-color: #fefce8a2;
+    font-size: 18px;
+    font-family: cartis-beautyful ,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: bold;
+    /* color:#fdba74; */
 }
 
-/* Main Content|Main Content One */
-.main-content-one{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-
-    padding: 5px;
-}
-.main-content-one > div{
-    border: 2px solid purple;
+#homepage-content > div{
+    /* border: 1px solid purple; */
+    text-align: center;
 }
 
-/* Main Content|Main Content Two */
-.main-content-two{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 10px;
-
-    padding: 5px;
+#homepage-content > div:nth-child(3) > p:nth-child(n){
+    line-height: 1.4;
 }
-.main-content-two > div{
-    border: 2px solid darkgreen;
+
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
+/* |Mobile Platform Section| */
+
+/* Media-1 - 1452px width */
+@media screen and (max-width: 1452px){
+    body{
+        background: url('../images/Concept-Art-11.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-color: #fefce8;
+    }
+}
+
+/* Media-2 - 1247px width*/
+@media screen and (max-width: 1247px){
+    body{
+        background: url('../images/Concept-Art-11.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-color: #fefce8;
+    }
+}
+
+/* Media-3 - 1087px width */
+@media screen and (max-width: 1087px){
+    body{
+        background: url('../images/Concept-Art-11.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 90%;
+        background-color: #fefce8;
+    }
+}
+
+/* Media-4 - 1027px width. Anything beyond this range will be specifically for mobile platforms and tablets. */
+@media screen and (max-width: 1027px){
+    /* body - The main body for the browser. */
+    body{
+        background: url('../images/Concept-Art-11.png');
+    }
+
+    /* |Main Module Content| */
+    .main-module-content{
+        width: 100%;
+    }
+}
+
+/* Media-5 - For mobile and tablets. */
+@media screen and (max-width: 862px){
+    /* |Homepage Content Section | */
+    #homepage-content{
+        width: 100%;
+    }
+    
+    /* |Main Module Footer| */
+    .main-module-footer{
+        width: 100%;
+    }
+
+    /* |Navigation Content Section| */
+    .navigation-content{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+    }
+    .navigation-content > div:nth-child(6){
+        grid-column: 1;
+
+        text-align: center;
+        font-size: 24px;
+    }
+}
+
+/* Media-6 - For Mobile */
+@media screen and (max-width: 400px){
+    /* Title Section */
+    .navigation-content > div:nth-child(6){
+        font-size: 16px;
+    }
+
+    /* |Main Module Footer| */
+    .main-module-footer{
+        font-size: 12px;
+    }
+}
+
+/* Media-7 - For 'Galaxy Fold' mobile device. */
+@media screen and (max-width: 280px){
+    /* |Main Module Footer| */
+    .main-module-footer{
+        font-size: 8px;
+    }
 }

@@ -3,25 +3,29 @@
 // Description: This is the main source page where all modules are imported.
 // Notes: N/A
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-console.log("This is the main source page."); // Testing
 import LoadHomePage from "./home";
 import LoadMenuPage from "./menu";
 import InitialPageLoad from "./initial-page-load";
-
+let count = 0;
 
 initial();
 
-function NavSection(){
-    const menuPage = document.querySelector('#menu-button');
-    const homePage = document.querySelector('#home-button');
-    menuPage.addEventListener('click', LoadMenuPage);
-    homePage.addEventListener('click', LoadHomePage);
+function NavSelection(){
+    count++;
+    console.log(`Count: ${count}`);
+
+    const homeButton = document.querySelector('#home-button');
+    const menuButton = document.querySelector('#menu-button');
+
+    homeButton.addEventListener('click', LoadHomePage);
+    menuButton.addEventListener('click', LoadMenuPage);
+
+    console.log("Outsid of the Event Listeners in the Navigation Selection function..."); // Testing
 }
 
-// initial(): Function will load the initial contents for the user.
-function initial() {
-    LoadHomePage();
+function initial(){
     InitialPageLoad();
-    NavSection();
+    LoadHomePage();
+    NavSelection();
 }
 
