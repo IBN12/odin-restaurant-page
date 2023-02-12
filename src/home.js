@@ -6,32 +6,39 @@
 
 // removeCurrentModuleContent():
 function RemovePreviousModuleContent(){
-    const content = document.querySelector('#content');
-    content.classList.remove('menu-page-background');
-    content.classList.remove('drinks-page-background');
-    content.classList.remove('about-us-page-background');
-    content.classList.remove('contact-us-page-background');
-
     // Node reference for the main module content for each tab.
-    const mainContent = document.querySelector('.main-module-content');
-    mainContent.replaceChildren(); // Remove any existing  DOM children if present.
+    const mainModuleContent = document.querySelector('.main-module-content');
+    mainModuleContent.replaceChildren(); // Remove any existing  DOM children if present.
 
-    const menuButton = document.querySelector('#menu-button');
-    menuButton.classList.remove('current-module-tab');
+    // Remove the current module tab from the current module that the user is on.
+    if (document.querySelector('#menu-button').classList.contains('current-module-tab'))
+    {
+        document.querySelector('#menu-button').classList.remove('current-module-tab');
+    }
+    else if (document.querySelector('#drinks-button').classList.contains('current-module-tab'))
+    {
+        document.querySelector('#drinks-button').classList.remove('current-module-tab');
+    }
+    else if (document.querySelector('#about-us-button').classList.contains('current-module-tab'))
+    {
+        document.querySelector('#about-us-button').classList.remove('current-module-tab');
+    }
+    else if (document.querySelector('#contact-us-button').classList.contains('current-module-tab'))
+    {
+        document.querySelector('#contact-us-button').classList.remove('current-module-tab');
+    }
 }
 
 // addCurrentModuleContent(): 
 function AddCurrentModuleContent(){
     const homeButton = document.querySelector('#home-button');
     homeButton.classList.add('current-module-tab');
-
-    content.classList.add('home-page-background');
 }
 
 // HomePageContent():
 function HomepageContent(){
     // Node reference for the main module content for each tab.
-    const mainContent = document.querySelector('.main-module-content');
+    const mainModuleContent = document.querySelector('.main-module-content');
 
     // Creating homepage content section that will be appended to the main module content. 
     const homepageContent = document.createElement('div');
@@ -66,7 +73,7 @@ function HomepageContent(){
 
     console.log(homepageContent); // Testing
 
-    mainContent.appendChild(homepageContent);
+    mainModuleContent.appendChild(homepageContent);
 }
 
 // LoadHomePage(): Function will load the home page by default.

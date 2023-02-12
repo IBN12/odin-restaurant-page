@@ -3,11 +3,12 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: url('../images/Concept-Art-11.png');
+    background-color: #fefce8;
+    /* background: url('../images/Concept-Art-11.png');
     background-position: center bottom 100%;
     background-repeat: no-repeat;
     background-size: 60%;
-    background-color: #fefce8;
+    background-color: #fefce8; */
 }
 
 /* * - All elements within the application. */
@@ -24,16 +25,22 @@ body{
     src: url(../fonts/cartis_beautyful/Cartis\ Beautyful\ serif.otf);
 }
 
-
-
 /***************************************************************************************************************************************************/
 /***************************************************************************************************************************************************/
 /* |Content Section| */
 #content{
-    padding: 20px;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
+
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100%;
+    width: 1100px;
+    background: url('../images/Concept-Art-11.png');
+    background-position: center bottom 100%;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 50% 100%;
 }
 
 /* |Content Section | Menu Page Background| */
@@ -119,7 +126,7 @@ body{
     margin: 0 auto;
     margin-top: 40px;
     width: 1000px;
-    border: 3px solid darkblue;
+    /* border: 3px solid darkblue; */
     padding: 10px;
 }
 
@@ -150,7 +157,7 @@ body{
     grid-template-rows: auto;
 
     margin: 0 auto;
-    border: 1px solid #fefce883;
+    border: 1px solid #fefce8a2;
     border-radius: 10px;
     color: black;
     padding: 10px;
@@ -173,63 +180,107 @@ body{
 
 /***************************************************************************************************************************************************/
 /***************************************************************************************************************************************************/
+/* |Menu Content Section| */
+#menu-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 40px;
+
+    margin: 0 auto;
+    border: 1px solid #fefce8a2;
+    border-radius: 10px;
+    padding: 10px;
+    width: 800px;
+    background-color: #fefce8a2;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: cartis-beautyful ,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+#menu-content > div{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(3, auto);
+
+    /* border: 1px solid purple; */
+    padding: 10px;
+}
+#menu-content > div > div{
+    /* border: 1px solid orange; */
+    padding: 3px;
+    text-align: center;
+}
+#menu-content > div > div:nth-child(2){
+    /* width: 100px; */
+    height: 300px;
+}
+#menu-content > div > div:nth-child(2) img[src]{
+    width: 100%;
+    height: 100%;
+}
+
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
+/* |Drinks Content Section| */
+#drinks-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 40px;
+
+    margin: 0 auto;
+    border: 1px solid #fefce8a2;
+    border-radius: 10px;
+    padding: 10px;
+    width: 800px;
+    background-color: #fefce8a2;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: cartis-beautyful ,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+#drinks-content > div{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+
+    /* border: 1px solid purple; */
+    padding: 10px;
+}
+#drinks-content > div > div{
+    /* border: 1px solid orange; */
+    padding: 3px;
+}
+#drinks-content > div > div:nth-child(2){
+    height: 300px;
+}
+#drinks-content > div > div:nth-child(2) img[src]{
+    width: 100%;
+    height: 100%;
+}
+
+
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
 /* |Mobile Platform Section| */
+/* TODO: Create Media for the changes in the background when the page shrinks on desktop.
+Create another Media for the changes in the background on mobile. */
 
-/* Media-1 - 1452px width */
-@media screen and (max-width: 1452px){
-    body{
-        background: url('../images/Concept-Art-11.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 70%;
-        background-color: #fefce8;
-    }
+/* Media-0 - Will hold the background image within the content section.  */
+@media screen and (max-width: 1600px){
+    /* Content Section */
+    #content{
+        background-size: 100%;
+        background-repeat: repeat;
+    } 
+
 }
 
-/* Media-2 - 1247px width*/
-@media screen and (max-width: 1247px){
-    body{
-        background: url('../images/Concept-Art-11.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 80%;
-        background-color: #fefce8;
-    }
-}
+/* Media-1 - 920px width. Anything beyond this range will be specifically for mobile platforms. */
+@media screen and (max-width: 920px){
 
-/* Media-3 - 1087px width */
-@media screen and (max-width: 1087px){
-    body{
-        background: url('../images/Concept-Art-11.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 90%;
-        background-color: #fefce8;
-    }
-}
-
-/* Media-4 - 1027px width. Anything beyond this range will be specifically for mobile platforms and tablets. */
-@media screen and (max-width: 1027px){
-    /* body - The main body for the browser. */
-    body{
-        background: url('../images/Concept-Art-11.png');
-    }
-
-    /* |Main Module Content| */
-    .main-module-content{
-        width: 100%;
-    }
-}
-
-/* Media-5 - For mobile and tablets. */
-@media screen and (max-width: 862px){
-    /* |Homepage Content Section | */
-    #homepage-content{
-        width: 100%;
-    }
-    
-    /* |Main Module Footer| */
-    .main-module-footer{
+    /* |Content Section| */
+    #content{
         width: 100%;
     }
 
@@ -237,6 +288,7 @@ body{
     .navigation-content{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        
         width: 100%;
     }
     .navigation-content > div:nth-child(6){
@@ -245,6 +297,51 @@ body{
         text-align: center;
         font-size: 24px;
     }
+
+    /* |Main Module Content| */
+    .main-module-content{
+        width: 100%;
+    }
+
+    /* |Main Module Footer| */
+    .main-module-footer{
+        width: 100%;
+    }
+
+    /* |Homepage Content Section| */
+    #homepage-content{
+        width: 100%; 
+    }
+    /********************************************************************************/
+    /*******************************************************************************/
+    /* |Menu Content| */
+    
+    /* Menu Content Section */
+    #menu-content{
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        
+        width: 100%;
+    }
+    #menu-content > div > div:nth-child(2){
+        /* width: 100px; */
+        height: 200px;
+    }
+    /********************************************************************************/
+    /*******************************************************************************/
+    /* |Drinks Content| */
+
+    /* Drinks Content Section */
+    #drinks-content{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+
+        width: 100%;
+    }
+    #drinks-content > div > div:nth-child(2){
+        height: 200px;
+    }
+
 }
 
 /* Media-6 - For Mobile */
