@@ -62,7 +62,7 @@ function HomepageContent(){
     para1.textContent = `Mosi's Restaurant is one of the finest eateries in the Portland, Oregon metropolitan area.
     Our restaurant consists of American style and international cuisines.`;
     para2.textContent = `Notable international cuisines such as Italian Fettuccine Alfredo dishes with chicken or shrimp; Thai
-    Teriyaki plate with optional savory sauces poured over chicken or pork; delicious Lebanese style Manakish dishes with cheese
+    Teriyaki plate with optional savory sauces poured over chicken or pork; delicious Levantine style Manakish dishes with cheese
     toppings or Za'atar spice on Middle Eastern flatbread.`;
     para3.textContent = `We also provide a wide selection of drinks from sparkling waters, ginger ales, and great tasting wines. If you
     are into a variety of different cuisines and amazing drinks in a causal elegant setting, then Mosi's Restaurant might be the place

@@ -244,11 +244,11 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
 
-    /* border: 1px solid purple; */
+    border: 1px solid purple;
     padding: 10px;
 }
 #drinks-content > div > div{
-    /* border: 1px solid orange; */
+    border: 1px solid orange;
     padding: 3px;
 }
 #drinks-content > div > div:nth-child(2){
@@ -257,6 +257,39 @@ body{
 #drinks-content > div > div:nth-child(2) img[src]{
     width: 100%;
     height: 100%;
+}
+
+/***************************************************************************************************************************************************/
+/***************************************************************************************************************************************************/
+/* |About Us Content Section| */
+#about-us-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 10px 0;
+    
+    margin: 0 auto;
+    width: 800px;
+    padding: 10px;
+    border: 1px solid #fefce8a2;
+    border-radius: 10px;
+    background-color: #fefce8a2;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: cartis-beautyful ,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+#about-us-content > div{
+    border: 1px solid green;
+}
+#about-us-content > div:nth-child(4){
+    grid-column: 1 / 4;
+}
+#about-us-content > div img[src]{
+    width: 100%;
+    height: 100%;
+}
+#about-us-content > div p:nth-child(n){
+    line-height: 1.4;
 }
 
 
@@ -341,6 +374,18 @@ Create another Media for the changes in the background on mobile. */
     #drinks-content > div > div:nth-child(2){
         height: 200px;
     }
+    /********************************************************************************/
+    /*******************************************************************************/
+    /* |About Us Content| */
+
+    /* About Us Content Section */
+    #about-us-content{
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        grid-template-rows: auto;
+
+        width: 100%;
+    }
+
 
 }
 
@@ -355,6 +400,16 @@ Create another Media for the changes in the background on mobile. */
     .main-module-footer{
         font-size: 12px;
     }
+
+    /* |About Us Content Section| */
+    #about-us-content{
+        grid-template-columns: repeat(3, minmax(70px, 1fr));
+        grid-template-rows: auto;
+
+        width: 100%;
+    }
+
+
 }
 
 /* Media-7 - For 'Galaxy Fold' mobile device. */
@@ -362,5 +417,13 @@ Create another Media for the changes in the background on mobile. */
     /* |Main Module Footer| */
     .main-module-footer{
         font-size: 8px;
+    }
+
+    /* |About Us Content Section| */
+    #about-us-content{
+        grid-template-columns: repeat(3, minmax(50px, 1fr));
+        grid-template-rows: auto;
+
+        width: 100%;
     }
 }
