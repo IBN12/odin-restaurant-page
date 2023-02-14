@@ -4,21 +4,20 @@
 // Notes: N/A
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// DrinkMenu Module: Will create a menu for all the drinks.
-const DrinkMenu = (()=>{
-
-    // addDrinks(): Will add drinks to the drinks content section. 
-    const addDrinks = (drinksContent) =>{
+// CreateItems Module: Will create item containers in the drink content section.
+const CreateItems = (()=>{
+    // createItems(): Creates the items for the drink menu.
+    const createItems = (drinksContent) => {
         for (let i = 0; i < 6; i++)
         {
             const drinkItems = document.createElement('div');
-            addRows(drinkItems);
+            createRows(drinkItems);
             drinksContent.appendChild(drinkItems);
         }
     }
-
-    // addRows(): Will add rows to each drink item section.
-    const addRows = (drinkItems) =>{
+    
+    // createRows(): Creates the rows for each drink item on the drink menu.
+    const createRows = (drinkItems) => {
         for (let i = 0; i < 3; i++)
         {
             const rows = document.createElement('div');
@@ -26,7 +25,7 @@ const DrinkMenu = (()=>{
         }
     }
 
-    return {addDrinks};
+    return {createItems};
 })();
 
 // RemovePreviousModuleContent(): Will remove the content from the previous module.
@@ -35,7 +34,7 @@ function RemovePreviousModuleContent(){
     const mainModuleContent = document.querySelector('.main-module-content');
     mainModuleContent.replaceChildren();
 
-    // Remove the current module tab from the current module that the user is on.
+    // Remove the current module tab from the last module that the user was on.
     if (document.querySelector('#home-button').classList.contains('current-module-tab'))
     {
         document.querySelector('#home-button').classList.remove('current-module-tab');
@@ -56,18 +55,14 @@ function RemovePreviousModuleContent(){
 
 // AddCurrentModuleContent(): Will add content to the current module.
 function AddCurrentModuleContent(){
+    const mainModuleContent = document.querySelector('.main-module-content');
+
     const drinksButton = document.querySelector('#drinks-button');
     drinksButton.classList.add('current-module-tab');
-}
-
-// DrinksPageContent(): Main content for the module. 
-function DrinksContent(){
-    const mainModuleContent = document.querySelector('.main-module-content');
 
     const drinksContent = document.createElement('div');
     drinksContent.setAttribute('id', 'drinks-content');
-
-    DrinkMenu.addDrinks(drinksContent);
+    CreateItems.createItems(drinksContent);
 
     // Drink Item One: Sparkling Water
     drinksContent.childNodes[0].childNodes[0].textContent = "Sparkling Water"; 
@@ -75,31 +70,36 @@ function DrinksContent(){
     drinkItemImageOne.src = '../images/Sparkling-Water.png';
     drinksContent.childNodes[0].childNodes[1].appendChild(drinkItemImageOne);
     drinksContent.childNodes[0].childNodes[2].textContent = "$2.23";
-    
+
+    // Drink Item Two: Ginger Ale
     drinksContent.childNodes[1].childNodes[0].textContent = "Ginger Ale";
     const drinkItemImageTwo = document.createElement('img');
     drinkItemImageTwo.src = '../images/Ginger-Ale.png';
     drinksContent.childNodes[1].childNodes[1].appendChild(drinkItemImageTwo);
     drinksContent.childNodes[1].childNodes[2].textContent = "$3.88";
 
+    // Drink Item Three: Niepoort Ruby Port
     drinksContent.childNodes[2].childNodes[0].textContent = "Niepoort Ruby Port";
     const drinkItemImageThree = document.createElement('img');
     drinkItemImageThree.src = '../images/Niepoort-Ruby-Port-Wine.png';
     drinksContent.childNodes[2].childNodes[1].appendChild(drinkItemImageThree);
     drinksContent.childNodes[2].childNodes[2].textContent = "$11.99";
 
+    // Drink Item Four: Red Wine
     drinksContent.childNodes[3].childNodes[0].textContent = "Red Wine"; 
     const drinkItemImageFour = document.createElement('img');
     drinkItemImageFour.src = '../images/Red-Wine.png';
     drinksContent.childNodes[3].childNodes[1].appendChild(drinkItemImageFour);
     drinksContent.childNodes[3].childNodes[2].textContent = "$10.00"; 
 
+    // Drink Item Five: Soda
     drinksContent.childNodes[4].childNodes[0].textContent = "Soda";
     const drinkItemImageFive = document.createElement('img');
     drinkItemImageFive.src = '../images/Soda.png';
     drinksContent.childNodes[4].childNodes[1].appendChild(drinkItemImageFive);
     drinksContent.childNodes[4].childNodes[2].textContent = "$3.60";
 
+    // Drink Item Six: Milk Shake
     drinksContent.childNodes[5].childNodes[0].textContent = "Milk Shake";
     const drinkItemImageSix = document.createElement('img');
     drinkItemImageSix.src = '../images/Milk-Shake.png';
@@ -109,14 +109,11 @@ function DrinksContent(){
     mainModuleContent.appendChild(drinksContent);
 }
 
+// LoadDrinksPage(): Loads all the methods needed for the module. 
 function LoadDrinksPage(){
-    console.log("The drinks page has loaded"); // Testing
-
     RemovePreviousModuleContent();
 
     AddCurrentModuleContent();
-    
-    DrinksContent();
 }
 
 export default LoadDrinksPage;

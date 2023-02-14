@@ -4,78 +4,36 @@
 // Notes: N/A
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// NavSection(): Navigation section
-function NavSection(){
-    // Node reference for the main content section.
-    const content = document.querySelector('#content');
-    console.log(content); // Testing
-    content.setAttribute('style', 'border: 1px solid red;');
+// CreateNavigationButton(): Will create module buttons as links in the navigation section. 
+function CreateNavigationButton(moduleButton, idName, linkContent, navSection){
+    const navSectionContent = document.createElement('div');
 
-    // Navigation Section: Will contain page links.
-    const navSection = document.createElement('div'); 
-    navSection.classList.add('navigation-content');
+    moduleButton.setAttribute('id', idName);
+    moduleButton.textContent = linkContent;
 
-    // Home: Home link
-    const home = document.createElement('button');
-    const navSectionContentOne = document.createElement('div');
-    home.setAttribute('id', 'home-button');
-    home.classList.add('active-module');
-    home.textContent = 'Home';
-    navSectionContentOne.appendChild(home);
-
-    // Menu: Menu link
-    const menu = document.createElement('button');
-    const navSectionContentTwo = document.createElement('div');
-    menu.setAttribute('id', 'menu-button');
-    menu.textContent = 'Menu';
-    navSectionContentTwo.appendChild(menu);
-
-    // Drinks: Drinks link
-    const drinks = document.createElement('button');
-    const navSectionContentThree = document.createElement('div');
-    drinks.setAttribute('id', 'drinks-button');
-    drinks.textContent = 'Drinks';
-    navSectionContentThree.appendChild(drinks);
-
-    // About Us: About Us link
-    const aboutUs = document.createElement('button');
-    const navSectionContentFour = document.createElement('div');
-    aboutUs.setAttribute('id', 'about-us-button');
-    aboutUs.textContent = 'About Us';
-    navSectionContentFour.appendChild(aboutUs);
-
-    // Contact Us: Contact Us link 
-    const contactUs = document.createElement('button');
-    const navSectionContentFive = document.createElement('div');
-    contactUs.setAttribute('id', 'contact-us-button');
-    contactUs.textContent = 'Contact Us';
-    navSectionContentFive.appendChild(contactUs);
-
-    // Logo: Restaurant logo
-    const logo = document.createElement('div');
-    logo.setAttribute('id', 'page-logo');
-    logo.textContent = "Mosi's Restaurant";
-
-    navSection.appendChild(navSectionContentOne);
-    navSection.appendChild(navSectionContentTwo);
-    navSection.appendChild(navSectionContentThree);
-    navSection.appendChild(navSectionContentFour);
-    navSection.appendChild(navSectionContentFive);
-    navSection.appendChild(logo);
-    content.appendChild(navSection);
+    navSectionContent.appendChild(moduleButton);
+    navSection.appendChild(navSectionContent);
 }
 
-// MainContent(): main content section for each module tab (module = page).
+// CreateNavigationLogo(): Will create a logo in the navigation section. 
+function CreateNavigationLogo(logo, idName, logoContent, navSection){
+    logo.setAttribute('id', idName);
+    logo.textContent = logoContent;
+
+    navSection.appendChild(logo);
+}
+
+// MainContent(): Main content section for each module tab (module = page).
 function MainContent(){
     const content = document.querySelector('#content');
+
     const mainContent = document.createElement('div');
     mainContent.classList.add('main-module-content');
-    console.log(mainContent); // Testing
 
     content.appendChild(mainContent);
 }
 
-// Footer: 
+// Footer: Footer content section for each module tab
 function Footer(){
     const content = document.querySelector('#content');
 
@@ -83,15 +41,46 @@ function Footer(){
     footer.classList.add('main-module-footer');
     footer.textContent = "Elegant Cutural Eatery"
 
-
     content.appendChild(footer);
 }
 
-// InitialPageLoad(): 
+// InitialPageLoad(): Loads all the initial methods and properties for entire content section.
 function InitialPageLoad(){
-    console.log("The initial function has been called");
-    NavSection();
+    // Node Reference for the main content section.
+    const content = document.querySelector('#content');
+
+    // Navigation Section: Will contain page links.
+    const navSection = document.createElement('div');
+    navSection.classList.add('navigation-content');
+
+    // Home Module Button:
+    const home = document.createElement('button');
+    CreateNavigationButton(home, 'home-button', 'Home', navSection);
+
+    // Menu Module Button:
+    const menu = document.createElement('button');
+    CreateNavigationButton(menu, 'menu-button', 'Menu', navSection);
+
+    // Drinks Module Button:
+    const drinks = document.createElement('button'); 
+    CreateNavigationButton(drinks, 'drinks-button', 'Drinks', navSection);
+
+    // About Us Module Button: 
+    const aboutUs = document.createElement('button');
+    CreateNavigationButton(aboutUs, 'about-us-button', 'About Us', navSection);
+
+    // Contact Us Module Button:
+    const contactUs = document.createElement('button');
+    CreateNavigationButton(contactUs, 'contact-us-button', 'Contact Us', navSection);
+
+    // Restaurant Logo:
+    const logo = document.createElement('div');
+    CreateNavigationLogo(logo, 'page-logo', "Mosi's Restaurant", navSection);
+
+    content.appendChild(navSection);
+
     MainContent();
+
     Footer();
 }
 

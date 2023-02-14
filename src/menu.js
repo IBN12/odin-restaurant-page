@@ -4,30 +4,28 @@
 // Notes: N/A
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// MenuItems Module: Will create a menu for all the meals. 
-const Menu= (() => {
-    console.log("The module MenuItems is initialized"); // Testing
-
-    // addContent(): Function will add items to the menu content section.
-    const addContent = (menuContent) =>{
+// MenuItems Module: Will create item containers in the menu content section.
+const CreateItems= (() => {
+    // createItems(): Creates the items for the menu.
+    const createItems = (menuContent) =>{
         for (let i = 0; i < 6; i++)
         {
             const menuItems = document.createElement('div');
-            addRows(menuItems);
+            createRows(menuItems);
             menuContent.appendChild(menuItems);
         }
     }
     
-    // addRows(): Function will add rows to each menu item section.
-    const addRows = (menuItem) => {
+    // createRows(): Creates the rows for each menu item on the menu.
+    const createRows = (menuItems) => {
         for (let i = 0; i < 3; i++)
         {
-            const menuItemRows = document.createElement('div');
-            menuItem.appendChild(menuItemRows);
+            const rows = document.createElement('div');
+            menuItems.appendChild(rows);
         }
     }
 
-    return {addContent};
+    return {createItems};
 })();
 
 // RemovePreviousModuleContent(): Will remove the content from the previous module.
@@ -36,7 +34,7 @@ function RemovePreviousModuleContent(){
     const mainModuleContent = document.querySelector('.main-module-content');
     mainModuleContent.replaceChildren();
 
-    // Remove the current module tab from the current module that the user is on.
+    // Remove the current module tab from the last module that the user was on.
     if (document.querySelector('#home-button').classList.contains('current-module-tab'))
     {
         document.querySelector('#home-button').classList.remove('current-module-tab');
@@ -57,19 +55,15 @@ function RemovePreviousModuleContent(){
 
 // AddCurrentModuleContent(): Will add content to the current module. 
 function AddCurrentModuleContent(){
-    const menuButton = document.querySelector('#menu-button');
-    menuButton.classList.add('current-module-tab');
-}
-
-// MenuContent(): Main content for the module. 
-function MenuContent(){
     const mainModuleContent = document.querySelector('.main-module-content');
 
+    const menuButton = document.querySelector('#menu-button');
+    menuButton.classList.add('current-module-tab');
+    
     const menuContent = document.createElement('div');
     menuContent.setAttribute('id', 'menu-content');
-
-    Menu.addContent(menuContent);
-
+    CreateItems.createItems(menuContent);
+    
     // Menu Item One: American Style Burger
     menuContent.childNodes[0].childNodes[0].textContent = "American Style Burger";
     const menuItemImageOne = document.createElement('img');
@@ -115,14 +109,11 @@ function MenuContent(){
     mainModuleContent.appendChild(menuContent);
 }
 
-// LoadMenuPage(): Load the menu page from the menu tab.
+// LoadMenuPage(): Loads all the methods needed for the module.
 function LoadMenuPage(){
-    console.log("The menu page has loaded"); // Testing
-    RemovePreviousModuleContent(); // Will remove the current content from the last module.
+    RemovePreviousModuleContent();
 
     AddCurrentModuleContent(); 
-
-    MenuContent();
 }
 
 export default LoadMenuPage;

@@ -7,32 +7,26 @@ import LoadHomePage from "./home";
 import LoadMenuPage from "./menu";
 import LoadDrinksPage from "./drinks";
 import LoadAboutUsPage from "./about-us";
+import LoadContactUsPage from "./contact-us";
 import InitialPageLoad from "./initial-page-load";
 
-let count = 0;
-
-initial();
-
 function NavSelection(){
-    count++;
-    console.log(`Count: ${count}`);
-
     const homeButton = document.querySelector('#home-button');
     const menuButton = document.querySelector('#menu-button');
     const drinksButton = document.querySelector('#drinks-button');
     const aboutUsButton = document.querySelector('#about-us-button');
+    const contactUsButton = document.querySelector('#contact-us-button');
 
     homeButton.addEventListener('click', LoadHomePage);
     menuButton.addEventListener('click', LoadMenuPage);
     drinksButton.addEventListener('click', LoadDrinksPage);
     aboutUsButton.addEventListener('click', LoadAboutUsPage);
-
-    console.log("Outside of the Event Listeners in the Navigation Selection function..."); // Testing
+    contactUsButton.addEventListener('click', LoadContactUsPage);
 }
 
-function initial(){
+const initial = (() => {
     InitialPageLoad();
     LoadHomePage();
     NavSelection();
-}
+})();
 
