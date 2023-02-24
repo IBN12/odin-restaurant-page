@@ -29,4 +29,3 @@ const initial = (() => {
     LoadHomePage();
     NavSelection();
 })();
-
