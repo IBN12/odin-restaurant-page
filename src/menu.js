@@ -67,42 +67,42 @@ function AddCurrentModuleContent(){
     // Menu Item One: American Style Burger
     menuContent.childNodes[0].childNodes[0].textContent = "American Style Burger";
     const menuItemImageOne = document.createElement('img');
-    menuItemImageOne.src = '../images/American-Style-Burger.png';
+    menuItemImageOne.src = '../src/images/American-Style-Burger.png';
     menuContent.childNodes[0].childNodes[1].appendChild(menuItemImageOne);
     menuContent.childNodes[0].childNodes[2].textContent = '$10.99';
 
     // Menu Item Two: Thai Style Teriyaki Plate
     menuContent.childNodes[1].childNodes[0].textContent = "Thai Style Teriyaki Plate";
     const menuItemImageTwo = document.createElement('img');
-    menuItemImageTwo.src = '../images/Thai-Style-Teriyaki-Plate.png';
+    menuItemImageTwo.src = '../src/images/Thai-Style-Teriyaki-Plate.png';
     menuContent.childNodes[1].childNodes[1].appendChild(menuItemImageTwo);
     menuContent.childNodes[1].childNodes[2].textContent = '$12.39';
 
     // Menu Item Three: Italian Style Fettuccine Alfredo with Chicken Plate
     menuContent.childNodes[2].childNodes[0].textContent = "Italian Style Fettuccine Alfredo";
     const menuItemImageThree = document.createElement('img');
-    menuItemImageThree.src = '../images/Italian-Style-Fettuccine-Alfredo.png';
+    menuItemImageThree.src = '../src/images/Italian-Style-Fettuccine-Alfredo.png';
     menuContent.childNodes[2].childNodes[1].appendChild(menuItemImageThree);
     menuContent.childNodes[2].childNodes[2].textContent = '$11.88';
 
     // Menu Item Four: Levantine Style Manakish with Za'atar Plate
     menuContent.childNodes[3].childNodes[0].textContent = "Levantine Style Manakish with Za'atar";
     const menuItemImageFour = document.createElement('img');
-    menuItemImageFour.src = "../images/Manakish-Za'atar-Style-Dish.png"; 
+    menuItemImageFour.src = "../src/images/Manakish-Za'atar-Style-Dish.png"; 
     menuContent.childNodes[3].childNodes[1].appendChild(menuItemImageFour);
     menuContent.childNodes[3].childNodes[2].textContent = "$14.78";
 
     // Menu Item Five: Creole Style Jambalaya Dish
     menuContent.childNodes[4].childNodes[0].textContent = "Creole Style Jambalaya";
     const menuItemImageFive = document.createElement('img');
-    menuItemImageFive.src = "../images/Creole-Style-Jambalaya.png";
+    menuItemImageFive.src = "../src/images/Creole-Style-Jambalaya.png";
     menuContent.childNodes[4].childNodes[1].appendChild(menuItemImageFive);
     menuContent.childNodes[4].childNodes[2].textContent = "$15.00";
 
     // Menu Item Six: Jamaican Style Jerk Chicken Plate
     menuContent.childNodes[5].childNodes[0]. textContent = "Jamaican Style Jerk Chicken with Rice";
     const menuItemImageSix = document.createElement("img");
-    menuItemImageSix.src = "../images/Jamaican-Style-Jerk-Chicken.png";
+    menuItemImageSix.src = "../src/images/Jamaican-Style-Jerk-Chicken.png";
     menuContent.childNodes[5].childNodes[1].appendChild(menuItemImageSix);
     menuContent.childNodes[5].childNodes[2].textContent = "$12.78";
 

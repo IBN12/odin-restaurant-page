@@ -18,6 +18,7 @@ body{
 @font-face {
     font-family: cartis-beautyful;
     src: url(../fonts/cartis_beautyful/Cartis\ Beautyful\ serif.otf);
+    /* src: url(../fonts/cartis_beautyful/Cartis\ Beautyful\ serif.otf); */
 }
 
 /***************************************************************************************************************************************************/
