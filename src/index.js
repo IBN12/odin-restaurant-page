@@ -10,6 +10,7 @@ import LoadAboutUsPage from "./about-us";
 import LoadContactUsPage from "./contact-us";
 import InitialPageLoad from "./initial-page-load";
 
+
 function NavSelection(){
     const homeButton = document.querySelector('#home-button');
     const menuButton = document.querySelector('#menu-button');

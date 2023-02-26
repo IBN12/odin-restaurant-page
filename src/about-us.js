@@ -55,32 +55,32 @@ function AddCurrentModuleContent(){
 
     // Image One: Bangkok, Thailand
     const aboutUsItemImageOne = document.createElement('img');
-    aboutUsItemImageOne.src = '../images/Bangkok-Thailand.png';
+    aboutUsItemImageOne.src = '../dist/images/Bangkok-Thailand.png';
     aboutUsContent.childNodes[0].appendChild(aboutUsItemImageOne);
 
     // Image Two: France
     const aboutUsItemImageTwo = document.createElement('img');
-    aboutUsItemImageTwo.src = '../images/France.png';
+    aboutUsItemImageTwo.src = '../dist/images/France.png';
     aboutUsContent.childNodes[1].appendChild(aboutUsItemImageTwo);
 
     // Image Three: Louisiana
     const aboutUsItemImageThree = document.createElement('img');
-    aboutUsItemImageThree.src = '../images/Louisiana.png';
+    aboutUsItemImageThree.src = '../dist/images/Louisiana.png';
     aboutUsContent.childNodes[2].appendChild(aboutUsItemImageThree);
 
     // Image Four: Middle East
     const aboutUsItemImageFour = document.createElement('img');
-    aboutUsItemImageFour.src = '../images/Middle-East.png';
+    aboutUsItemImageFour.src = '../dist/images/Middle-East.png';
     aboutUsContent.childNodes[4].appendChild(aboutUsItemImageFour);
 
     // Image Five: Italy
     const aboutUsItemImageFive = document.createElement('img');
-    aboutUsItemImageFive.src = '../images/Italy.png';
+    aboutUsItemImageFive.src = '../dist/images/Italy.png';
     aboutUsContent.childNodes[5].appendChild(aboutUsItemImageFive);
 
     // Image Six: Caribbean
     const aboutUsItemImageSix = document.createElement('img');
-    aboutUsItemImageSix.src = '../images/Caribbean.png';
+    aboutUsItemImageSix.src = '../dist/images/Caribbean.png';
     aboutUsContent.childNodes[6].appendChild(aboutUsItemImageSix);
 
     // Details:
