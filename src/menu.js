@@ -9,6 +9,7 @@ import italianStyleFettuccineAlfredo from "../dist/images/Italian-Style-Fettucci
 import jamaicanStyleJerkChicken from "../dist/images/Jamaican-Style-Jerk-Chicken.png";
 import manakishZaatarStyleDish from "../dist/images/Manakish-Za'atar-Style-Dish.png";
 import creoleStyleJambalaya from "../dist/images/Creole-Style-Jambalaya.png";
+
 // MenuItems Module: Will create item containers in the menu content section.
 const CreateItems= (() => {
     // createItems(): Creates the items for the menu.
@@ -68,15 +69,12 @@ function AddCurrentModuleContent(){
     const menuContent = document.createElement('div');
     menuContent.setAttribute('id', 'menu-content');
     CreateItems.createItems(menuContent);
-
-    const menuImage = new Image();
-    menuImage.src = americanStyleBurger;
     
     // Menu Item One: American Style Burger
     menuContent.childNodes[0].childNodes[0].textContent = "American Style Burger";
     const menuItemImageOne = document.createElement('img');
     menuItemImageOne.src = americanStyleBurger;
-    menuContent.childNodes[0].childNodes[1].appendChild(menuImage);
+    menuContent.childNodes[0].childNodes[1].appendChild(menuItemImageOne);
     menuContent.childNodes[0].childNodes[2].textContent = '$10.99';
 
     // Menu Item Two: Thai Style Teriyaki Plate

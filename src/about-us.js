@@ -3,6 +3,12 @@
 // Description: This is the about us page for the application.
 // Notes: N/A
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import bangkokThailand from '../dist/images/Bangkok-Thailand.png';
+import france from '../dist/images/France.png';
+import louisiana from '../dist/images/Louisiana.png';
+import middleEast from '../dist/images/Middle-East.png';
+import italy from '../dist/images/Italy.png';
+import caribbean from '../dist/images/Caribbean.png';
 
 // aboutUsItems module: Will produce the container items in the about us content section
 const CreateItems = (()=>{
@@ -55,32 +61,32 @@ function AddCurrentModuleContent(){
 
     // Image One: Bangkok, Thailand
     const aboutUsItemImageOne = document.createElement('img');
-    aboutUsItemImageOne.src = '../dist/images/Bangkok-Thailand.png';
+    aboutUsItemImageOne.src = bangkokThailand;
     aboutUsContent.childNodes[0].appendChild(aboutUsItemImageOne);
 
     // Image Two: France
     const aboutUsItemImageTwo = document.createElement('img');
-    aboutUsItemImageTwo.src = '../dist/images/France.png';
+    aboutUsItemImageTwo.src = france;
     aboutUsContent.childNodes[1].appendChild(aboutUsItemImageTwo);
 
     // Image Three: Louisiana
     const aboutUsItemImageThree = document.createElement('img');
-    aboutUsItemImageThree.src = '../dist/images/Louisiana.png';
+    aboutUsItemImageThree.src = louisiana;
     aboutUsContent.childNodes[2].appendChild(aboutUsItemImageThree);
 
     // Image Four: Middle East
     const aboutUsItemImageFour = document.createElement('img');
-    aboutUsItemImageFour.src = '../dist/images/Middle-East.png';
+    aboutUsItemImageFour.src = middleEast;
     aboutUsContent.childNodes[4].appendChild(aboutUsItemImageFour);
 
     // Image Five: Italy
     const aboutUsItemImageFive = document.createElement('img');
-    aboutUsItemImageFive.src = '../dist/images/Italy.png';
+    aboutUsItemImageFive.src = italy;
     aboutUsContent.childNodes[5].appendChild(aboutUsItemImageFive);
 
     // Image Six: Caribbean
     const aboutUsItemImageSix = document.createElement('img');
-    aboutUsItemImageSix.src = '../dist/images/Caribbean.png';
+    aboutUsItemImageSix.src = caribbean;
     aboutUsContent.childNodes[6].appendChild(aboutUsItemImageSix);
 
     // Details:
